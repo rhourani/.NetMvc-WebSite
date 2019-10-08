@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MVCProjesi.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Prodects</h2>
+
+<p>
+    @Html.ActionLink("New prodect", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdKind)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prodImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdPrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdKind)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prodImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdPrice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    
+}
+
+
+@*/*Styles for input's width*/*@
+<style>
+    input[type=text] {
+        width: 300px;
+    }
+
+    input[type=email] {
+        width: 300px;
+    }
+</style>
+<div class="container">
+    <form name="Sign-up" action="#" method="post">
+
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-4"><h3><br> Contact us Application<br><br></h3></div>
+            <div class="col-md-3"></div>
+        </div>
+
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-2">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label><b> Name </b></label></td>
+                    </tr>
+                    <tr>
+                        <td> <br><label><b> E-Mail</b></label></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-7">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><br><br><input type="text" name="Username" placeholder="Name"></td>
+                    </tr>
+                    <tr>
+                        <td><br><br><input type="email" name="mail" placeholder="E-Mail"><br><br></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-10"><br> <textarea rows="12" cols="110" type="textarea" name="textArea" placeholder="Text area"></textarea></div>
+        </div>
+        @*submit botunu*@
+        <div class="row">
+
+            <div class="col-md-9">
+            </div>
+            <div class="col-md-3">
+                <br>
+                <input type="submit" value="Submit">
+                <br><br><br><br><br>
+
+            </div>
+        </div>
+    </form>
+</div>
+
+

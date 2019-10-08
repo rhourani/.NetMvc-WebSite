@@ -1,0 +1,41 @@
+/*styling for hover*/
+
+/*.container {
+    position: relative;
+    width: 50%;
+}*/
+
+.image:hover {
+  opacity: 0.3;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+:hover .middle{
+  transition: .5s ease;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+
+.container .image:hover {
+  opacity: 0.3;
+}
+
+.container .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}

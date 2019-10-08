@@ -1,0 +1,83 @@
+﻿
+@model MVCProjesi.Models.Customer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@Styles.Render("~/Content/css")
+@Styles.Render("~/Content/metisMenu.min.css")
+@Styles.Render("~/Content/sb-admin-2.css")
+@Styles.Render("~/Content/font-awesome.min.css")
+@Styles.Render("~/Content/style.css")
+@Scripts.Render("~/bundles/modernizr")
+
+<!-- Navigation -->
+<nav>
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <!-- /.navbar-header -->
+
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+
+                <li>
+                    <a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-edit fa-fw"></i> My Orders</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-edit fa-fw"></i> My Bouns</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-edit fa-fw"></i> Tell us sug. and complaint.</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.sidebar-collapse -->
+    </div>
+    <!-- /.navbar-static-side -->
+</nav>
+
+<!-- Page Content -->
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Welcome To Your Profile Page</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="en.png" style="width: 100px; height: 100%" class="img-circle" /><br>
+                    </div>
+                    <div class="col-md-8">
+                        <br><br><br><br><br><br><br>
+                        <h5>Name: </h5><br>
+                        <h5>Surname: </h5><br>
+                        <h5>E-mial: </h5><br>
+                        <h5>Adres: </h5><br>
+                        <h5>Tel: </h5><br>
+                    </div>
+
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+</div>
+<!-- /#page-wrapper -->
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@Scripts.Render("~/bundles/metisMenu.min.js")
+@Scripts.Render("~/bundles/sb-admin-2.js")
+

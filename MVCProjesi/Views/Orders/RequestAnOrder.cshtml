@@ -1,0 +1,95 @@
+﻿
+<style>
+    input[type=text] {
+        width: 300px;
+    }
+
+    input[type=digits] {
+        width: 75px;
+    }
+</style>
+<form name="requestOrder" action="#" method="post">
+
+    <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-4"><h3><br> Request an order<br><br></h3></div>
+        <div class="col-md-3"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+            <select name="Pizza">
+                <option value="Margin">Margin</option>
+                <option value="HotPizza">Hot Pizza</option>
+            </select>
+        </div><br>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8"><br><label><b> Personel info:</b></label></div>
+    </div>
+
+    <div class="col-md-5"></div>
+    <div class="col-md-7">
+        <table>
+            <tbody>
+                <tr>
+                    <td><br><input type="text" name="Name" placeholder="Name"></td>
+                </tr>
+                <tr>
+                    <td><br><input type="text" name="Surname" placeholder="E-Mail"><br></td>
+                </tr>
+                <tr>
+                    <td><br><input type="tel" name="Telefon" placeholder="Telefon"><br></td>
+                </tr>
+                <tr>
+                    <td><br><input type="text" name="Adres" placeholder="Adres"><br></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8"><br><label><b> Bil information:</b></label></div><br>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8"><img src="images/en.png" class="image" style="width:15%"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-7">
+            <table>
+                <tbody>
+                    <tr>
+                        <td><br><input type="text" name="name-Surname" placeholder="Name-Surname"></td>
+                    </tr>
+                    <tr>
+                        <td><br><input type="text" name="cardNumber" placeholder="Card Number (16 digits)"><br></td>
+                    </tr>
+                    <tr>
+                        <td><br><input type="digits" name="validDate" placeholder="Validation"><br></td>
+                    </tr>
+                    <tr>
+                        <td><br><input type="digits" name="cvv" placeholder="cvv"><br><br></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-4">
+            <br>
+            <input type="submit" value="Give Order">
+            <br><br><br><br><br>
+
+        </div>
+    </div>
+</form>

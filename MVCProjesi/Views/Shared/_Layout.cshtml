@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/style.css")
+    @Styles.Render("~/Content/styleHover.css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="images" type="image" href="~/images/en.png" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("RYPizza", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+              
+           </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About US", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                   
+                </ul>
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dil <span class="caret"></span></a>
+                        <ul class="dropdown-menu","form-horizontal">
+                            <li>&ensp; <b>en</b></li>
+                            <li>&ensp; <b>tr</b></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+
+
+
+
+
+
+                <ul class="nav navbar-nav  navbar-right pad0">
+
+                    @* sikayet oneri *@
+                    <li>
+                        <a href="#">
+                            <span id="myBtnSikayetOneri">suggestion</span>
+                        </a>
+                    </li>
+
+                    <li>
+                    @Html.ActionLink("Admin", "Admin", "Admin")
+                    </li>
+                    
+
+
+                    <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-user" id="myBtn"></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/Customers/Create">
+                            @*@Html.ActionLink("S", "SignUp", "Home")*@
+                            <span class="glyphicon glyphicon-log-in"></span>
+                         </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+        <div class="row padTop30">
+            <div class="container">
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-5">
+                    <div id="map" style="width:275px;height:275px;background:yellow"></div>
+
+                    <script>
+                        function myMap() {
+                            var mapCanvas = document.getElementById("map");
+                            var mapOptions = {
+                                center: new google.maps.LatLng(41.034035, 28.978568), zoom: 10
+                            };
+                            var map = new google.maps.Map(mapCanvas, mapOptions);
+                        }
+                    </script>
+
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhz0lUbgG9tC7cQIolmCHb7fAxi7FlOLw&callback=myMap"></script>
+                    <br></div>
+                <div class="col-md-2">
+                </div>
+
+                <div class="col-md-4">
+                    Taksim İstkilal Cd.<br />
+                    No:12 Istanbul / Turkey<br />
+                    Phone: 444 55 88<br />
+                    Phonr: 444 66 77<br />
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="row well padTop20">
+                <div class="container">
+                    <div class="col-md-9 text-info">
+                        <strong> desiegned by RY SAÜ All Copy Rights saved &copy; </strong>
+                    </div>
+                    <div class="col-md-3 ">
+                        <ul class="social-network social-circle">
+
+                            <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    @* sign_in pop up *@
+    <div class="container">
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content ">
+
+                    <div class="modal-header" style="padding:4px 25px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3><span class="glyphicon glyphicon-log-in"></span> Login</h3>
+                    </div>
+                    <div class="modal-body" style="padding:40px 30px;">
+                        <form role="form" method="post">
+                            <div class="form-group">
+                                <label name="mail"><span class="glyphicon glyphicon-envelope"></span> e-mail</label>
+                                <input type="text" class="form-control" id="mail" placeholder="Enter email" required>
+                            </div>
+                            <div class="form-group">
+                                <label name="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                                <input type="password" class="form-control" id="psw" placeholder="Enter password" required>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" checked>Remember me</label>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                        <p>I'am not a member? <a href="/Home/SignUp">Sign up</a></p>
+                        <p>Forgot <a href="#">Password?</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#myBtn").click(function () {
+                $("#myModal").modal();
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+    @* sikayet öneri pop up *@
+
+    <div class="container" >
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModalSikayetOneri" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:4px 25px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3> Complaint And Sug. Form</h3>
+                    </div>
+                    <div class="modal-body" style="padding:35px 75px;">
+                        <form role="form" method="post">
+                            <div class="form-group">
+                                <select name="Topic">
+                                    <option value="Suggestion"> Suggestion</option>
+                                    <option value="Complaint"> Complaint</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <label name="Topic"> Topic* </label>
+                                        </div>
+                                    <div class="col-md-10">
+                                        <br><br> <input type="text" class="form-control" id="topic" placeholder="Topic" required><br><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"> </div>
+                                <div class="col-md-10">
+                                    <textarea rows="10" cols="25" typeof="text" name="textarea" required></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                               <button type="submit" class="btn btn-success btn-default pull-right"> Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#myBtnSikayetOneri").click(function () {
+                $("#myModalSikayetOneri").modal();
+            });
+        });
+    </script>
+
+
+</body>
+</html>

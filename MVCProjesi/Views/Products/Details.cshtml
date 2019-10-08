@@ -1,0 +1,58 @@
+﻿@model MVCProjesi.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details of prodect</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdKind)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdKind)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prodImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prodImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProductID }) |
+    @Html.ActionLink("Back to prodect", "Index")
+</p>

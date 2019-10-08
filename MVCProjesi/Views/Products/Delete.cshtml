@@ -1,0 +1,64 @@
+﻿@model MVCProjesi.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete prodect</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdKind)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdKind)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prodImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prodImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdPrice)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("prodect", "Index")
+        </div>
+    }
+</div>
